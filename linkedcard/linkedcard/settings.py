@@ -58,9 +58,13 @@ WSGI_APPLICATION = 'linkedcard.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'linkcard',
+        'USER':'steven',
+        'PASSWORD':'passw0rd',
+        'HOST':'card.cznxydiemfdo.us-west-2.rds.amazonaws.com',
+        'PORT':'3306',
+         }
 }
 
 # Internationalization
@@ -68,7 +72,7 @@ DATABASES = {
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'EST'
 
 USE_I18N = True
 
