@@ -10,7 +10,7 @@ class User(models.Model):
 class Relation(models.Model):
 	user_id = models.ForeignKey(User)
 
-class Template
+class Template(models.Model):
 	template_id = models.CharField(max_length=50, primary_key=True)
 	location = models.CharField(max_length=500)
 	name = models.CharField(max_length=10, null=False)
