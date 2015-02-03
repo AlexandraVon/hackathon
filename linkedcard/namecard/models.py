@@ -9,3 +9,4 @@ class User(models.Model):
 
 class Relation(models.Model):
 	user_id = models.ForeignKey(User)
+	follow_id = models.ForeignKey(User)
