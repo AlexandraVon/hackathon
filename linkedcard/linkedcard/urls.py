@@ -3,7 +3,8 @@ from django.contrib import admin
 from cards.views import MyView
 from cards.api import UserResource,TemplateResource
 from tastypie.api import Api
-
+from rest_framework import routers, serializers, viewsets
+from django.contrib.auth.models import User
 v1_api= Api(api_name='v1')
 v1_api.register(UserResource())
 v1_api.register(TemplateResource())
@@ -38,6 +39,7 @@ urlpatterns = patterns('',
     url(r'^myview/',MyView.as_view()),	
 #    url(r'^api/',include(UserResource().urls)),
 #    url(r'^api/',include(TemplateResource().urls)),
-    (r'^api/',include(v1_api.urls)),
+  #  (r'^api/',include(v1_api.urls)),
+	url(r'^', include(router.urls)),
 	(r'^api-auth',include('rest_framework.urls', namespace='rest_framework')),
 )
