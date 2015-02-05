@@ -8,6 +8,27 @@ v1_api= Api(api_name='v1')
 v1_api.register(UserResource())
 v1_api.register(TemplateResource())
 
+
+# Serializers define the API representation.
+class UserSerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = User
+        fields = ('url', 'username', 'email', 'is_staff')
+
+# ViewSets define the view behavior.
+class UserViewSet(viewsets.ModelViewSet):
+    queryset = User.objects.all()
+    serializer_class = UserSerializer
+
+# Routers provide an easy way of automatically determining the URL conf.
+router = routers.DefaultRouter()
+router.register(r'users', UserViewSet)
+
+
+
+
+
+
 urlpatterns = patterns('',
     # Examples:
     # url(r'^$', 'linkedcard.views.home', name='home'),
