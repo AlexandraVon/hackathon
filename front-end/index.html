@@ -1,0 +1,47 @@
+<!DOCTYPE html> 
+<html>
+<head>
+	<title>Page Title</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<title>LinkedCard</title>
+		<!-- <link rel="stylesheet" href="themes/Bootstrap.css"> -->
+		<!-- <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.0/jquery.mobile.structure-1.4.0.min.css" /> -->
+		<!-- <link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" /> -->
+
+		<!-- Include jQuery Mobile stylesheets -->
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+
+		<link rel="stylesheet" href="style.css">
+		<!-- Include the jQuery library -->
+		<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+
+		<!-- Include the jQuery Mobile library -->
+		<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+		<script src="style.js"></script>
+</head>
+<body>
+	<div data-role="page" id="welcome" data-theme="b">
+		<div data-role="header" ><h2>Welcome</h2></div>
+		<a id="start" data-theme="a" data-role="button" onclick="login()">Get My Card &#62;</a>
+		<img src="img/linkedcard.png" id="logo">
+		<img src="img/square1.png" id="sq1">
+		<img src="img/square2.png" id="sq2">
+		<img src="img/square3.png" id="sq3">
+		<img src="img/square4.png" id="sq4">
+	</div>
+
+	<div data-role="page" id="non_existed_user" data-theme="b">
+		<div data-role="header" id="welcom_head"></div>
+	</div>
+
+	<div data-role="page" id="choose" data-theme="b">
+		<div data-role="header"> Choose Your Name Card</div>
+	</div>
+
+	<div data-role="page" id="existed_user" data-theme="b">
+		<div data-role="header"> Your Name Card</div>
+	</div>
+
+</body>
+</html>
