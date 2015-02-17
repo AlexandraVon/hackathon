@@ -2,7 +2,7 @@ from flask import Flask
 from flask.ext.sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://steven:passw0rd@card.cznxydiemfdo.us-west-2.rds.amazonaws.com/linkcard'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://@card.cznxydiemfdo.us-west-2.rds.amazonaws.com/linkcard'
 db = SQLAlchemy(app)
 
 
